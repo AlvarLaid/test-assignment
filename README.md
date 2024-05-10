@@ -17,8 +17,8 @@ Also, as I had to timebox this test assignment fairly aggressively then I did no
 ## General notes
 
 - currently the application shows maximum of 50 burger joints within 1,001 to 5,5km from Tartu Bus station
-- as I had to timebox this test assignment fairly aggressively then I did not get to adding tests or making the experience accessible for other users. If any of those is a hard requirement and rest of it looks fine then please reach out and I can add them.
-- structure of the application is meant so support addition of other venue types at a later date, this is why burger-joints is built as a separate feature
+- as I had to timebox this test assignment fairly aggressively then I did not get to adding tests or making the experience accessible for users with disabilities. If any of those is a hard requirement and rest of it looks fine then please reach out and I can add those.
+- structure of the application is meant to support addition of other venue types at a later date, this is why burger-joints is built as a separate feature
 - I added Powered by Foursquare tothe footer due to their terms of service
 - the default image is of a burger, but is intentionally not highlighted
 - Although Foursquare API sorts photos array by latest I still decided to err on the side of caution and double check this is code to guard against any regression
