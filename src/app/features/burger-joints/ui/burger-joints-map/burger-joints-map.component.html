@@ -1,0 +1,16 @@
+<google-map [options]="options" width="100%">
+  @for(marker of facade.burgerJointsLocations(); track marker.id) {
+  <map-marker
+    #markerRef="mapMarker"
+    [position]="marker.location"
+    [title]="marker.title"
+    (mapClick)="openInfo(markerRef, marker.title)"
+  />
+  <map-info-window>{{ info }}</map-info-window>
+  <map-circle
+    [center]="centerPoint"
+    [radius]="1000"
+    [options]="circleOptions"
+  />
+  }
+</google-map>

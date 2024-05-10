@@ -1,0 +1,36 @@
+:host {
+  --margin: 48px 96px;
+}
+
+@media screen and (max-width: 1024px) {
+  :host {
+    --margin: 24px 48px;
+  }
+}
+
+.container {
+  margin: var(--margin);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  color: white;
+
+  & h1 {
+    margin-bottom: 0;
+  }
+
+  & span {
+    display: inline-block;
+  }
+}
+
+footer {
+  & p {
+    text-align: center;
+    font-size: 0.6rem;
+  }
+}

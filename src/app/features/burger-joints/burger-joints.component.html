@@ -1,0 +1,13 @@
+<venues-burger-joints-map />
+<ul aria-label="Burger joints">
+  @for(burgerJoint of facade.burgerJoints(); track burgerJoint.id) {
+  <li class="img-container">
+    <img
+      venuesBurgerJointPhotoHighlight
+      [photoUrl]="burgerJoint.photoUrl"
+      [src]="burgerJoint.photoUrl ?? 'default-burger.png'"
+      [alt]="'Image of ' + burgerJoint.name"
+    />
+  </li>
+  }
+</ul>

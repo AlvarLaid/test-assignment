@@ -2,26 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0-rc.0.
 
-## Development server
+## Getting started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**NB!** This test assignment is provided without api keys. When providing your keys, please generate once off keys and delete them immediately after use as this repository is not audited for any security vulnerabilities. This warning is out of abundance of caution as I have not added any outright suspicious packages, but we are dealing with npm here.
 
-## Code scaffolding
+Also, as I had to timebox this test assignment fairly aggressively then I did not get to adding tests. If this is a hard requirement and rest of it looks fine then please reach out and I can add them.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. run `npm install`
+2. generate new environment files with `ng generate environments`
+3. follow the structure of `environments.example.ts` file to provide Foursquare api key in `environment.development.ts` file
+4. add your google maps api key to index.html file (look for `key` property in script). This is technically an optional step because you should still be able to use a heavily watermarked map
+5. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 
-## Build
+## General notes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- currently the application shows maximum of 50 burger joints within 1,001 to 5,5km from Tartu Bus station
+- as I had to timebox this test assignment fairly aggressively then I did not get to adding tests or making the experience accessible for other users. If any of those is a hard requirement and rest of it looks fine then please reach out and I can add them.
+- structure of the application is meant so support addition of other venue types at a later date, this is why burger-joints is built as a separate feature
+- I added Powered by Foursquare tothe footer due to their terms of service
+- the default image is of a burger, but is intentionally not highlighted
+- Although Foursquare API sorts photos array by latest I still decided to err on the side of caution and double check this is code to guard against any regression

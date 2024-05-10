@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AsyncPipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { BurgerJointsComponent } from '@burger-joints';
+import { NotificationService } from './core/util/notification.service';
 
 @Component({
   selector: 'venues-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [BurgerJointsComponent, AsyncPipe],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'venues';
+  notifications = inject(NotificationService);
+  title = 'Venues';
 }

@@ -1,0 +1,37 @@
+:host {
+  --padding: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  :host {
+    --padding: 0;
+  }
+}
+
+ul {
+  padding: var(--padding);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style-type: none;
+  width: calc(100% - var(--padding) * 2);
+
+  .img-container {
+    flex: 1;
+    flex-grow: 1;
+    min-width: 220px;
+    max-width: 220px;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.highlight {
+  outline: 4px solid orange;
+}
