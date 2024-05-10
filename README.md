@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Getting started
 
-**NB!** This test assignment is provided without api keys. When providing your keys, please generate once off keys and delete them immediately after use as this repository is not audited for any security vulnerabilities. This warning is out of abundance of caution as I have not added any outright suspicious packages, but we are dealing with npm here.
+**NB!** This test assignment is provided without api keys. When providing your keys, please generate once off keys as this repository is not audited for any security vulnerabilities. This warning is out of abundance of caution as I have not added any outright suspicious packages, but we are dealing with npm here.
 
 Also, as I had to timebox this test assignment fairly aggressively then I did not get to adding tests. If this is a hard requirement and rest of it looks fine then please reach out and I can add them.
 
