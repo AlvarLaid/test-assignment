@@ -15,13 +15,14 @@ export const burgerJointsInRadius = (
   burgerJointsRaw.filter((burgerJoint) => burgerJoint.distance > radius);
 
 export const rawDataToBurgerJoints = (
-  burgerJointsRaw: BurgerJointsRaw
+  burgerJointsRaw: BurgerJointsRaw,
+  photoSize: number
 ): BurgerJoints =>
   burgerJointsRaw.map((rawBurgerJoint) => ({
     id: rawBurgerJoint.fsq_id,
     location: rawBurgerJoint.geocodes.main,
     name: rawBurgerJoint.name,
-    photoUrl: findLatestPhotoUrl(rawBurgerJoint.photos),
+    photoUrl: findLatestPhotoUrl(rawBurgerJoint.photos, photoSize),
   }));
 
 export const toBurgerJointMarkers = (
@@ -37,7 +38,10 @@ export const toBurgerJointMarkers = (
     title: burgerJoint.name,
   }));
 
-function findLatestPhotoUrl(photos: BurgerJointRawPhotos): BurgerJointPhotoUrl {
+function findLatestPhotoUrl(
+  photos: BurgerJointRawPhotos,
+  photoSize: number
+): BurgerJointPhotoUrl {
   const latestPhoto = photos.reduce<BurgerJointRawPhoto | undefined>(
     (latest, photo) => {
       if (!latest) {
@@ -48,5 +52,8 @@ function findLatestPhotoUrl(photos: BurgerJointRawPhotos): BurgerJointPhotoUrl {
     },
     undefined
   );
-  return latestPhoto && `${latestPhoto.prefix}240x240${latestPhoto.suffix}`;
+  return (
+    latestPhoto &&
+    `${latestPhoto.prefix}${photoSize}x${photoSize}${latestPhoto.suffix}`
+  );
 }

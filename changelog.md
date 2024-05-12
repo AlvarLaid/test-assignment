@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.0 - Feat: estimate appropriate burger joint image size
+
+- Roughly estimate the appropriate burger joint image size based on the actual viewport. This is meant to ensure that the user does not see overly pixellated image at differet screen sizes. A reasonable difference between actual image and fetched image is OK.
+- NB! I did choose to use `ResizeObserver` here instead of checking the width during the fetch because that way we can be sure that we don't incurr any unncessary reflows. Essentially instead of checking the width on each request we just listen for actual resizing of the burger joints list and save the estimated image size there.
+
 ## v0.0.2 - Chore: refactor CSS
 
 - Use grid for app shell

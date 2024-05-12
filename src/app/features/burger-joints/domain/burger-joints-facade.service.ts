@@ -29,4 +29,8 @@ export class BurgerJointsFacadeService implements OnDestroy {
   photoContainsBurger(url: BurgerJointPhotoUrl): Observable<boolean> {
     return !!url ? this.photoService.photoContainsBurger(url) : of(false);
   }
+
+  updateBurgerJointPhotoSize(size: number) {
+    this.state.burgerJointImageSize = size;
+  }
 }

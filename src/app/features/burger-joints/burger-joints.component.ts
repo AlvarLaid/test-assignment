@@ -7,12 +7,17 @@ import { BurgerJointsService } from './domain/burger-joints.service';
 import { BurgerJointPhotoUrl } from './model/burger-joints.model';
 import { BurgerJointsStateService } from './state/burger-joints-state.service';
 import { BurgerJointPhotoHighlightDirective } from './ui/burger-joint-photo-highlight/burger-joint-photo-highlight.directive';
+import { BurgerJointPhotoSizeDirective } from './ui/burger-joint-photo-size/burger-joint-photo-size.directive';
 import { BurgerJointsMapComponent } from './ui/burger-joints-map/burger-joints-map.component';
 
 @Component({
   selector: 'venues-burger-joints',
   standalone: true,
-  imports: [BurgerJointsMapComponent, BurgerJointPhotoHighlightDirective],
+  imports: [
+    BurgerJointsMapComponent,
+    BurgerJointPhotoHighlightDirective,
+    BurgerJointPhotoSizeDirective,
+  ],
   providers: [
     BurgerJointsDataAccessService,
     BurgerJointsStateService,
