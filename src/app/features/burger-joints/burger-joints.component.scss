@@ -1,12 +1,12 @@
 :host {
-  --padding: 16px;
+  --burger-list-padding: 16px;
   --grid-gap: 8px;
   --grid-column-count: 3;
 }
 
 @media screen and (max-width: 1024px) {
   :host {
-    --padding: 0;
+    --burger-list-padding: 0;
   }
 }
 
@@ -20,8 +20,8 @@ ul {
   );
   justify-content: space-between;
   list-style-type: none;
-  padding: var(--padding);
-  width: calc(100% - var(--padding) * 2);
+  padding: var(--burger-list-padding);
+  width: calc(100% - var(--burger-list-padding) * 2);
 
   & img {
     object-fit: cover;
@@ -30,5 +30,5 @@ ul {
 }
 
 .highlight {
-  outline: 4px solid orange;
+  outline: 4px solid var(--color-accent);
 }

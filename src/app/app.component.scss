@@ -1,23 +1,16 @@
-:host {
-  --margin: 48px 96px;
-}
-
-@media screen and (max-width: 1024px) {
-  :host {
-    --margin: 24px 48px;
-  }
-}
-
-.container {
-  margin: var(--margin);
+.app-shell-container {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-row-gap: 16px;
+  margin: calc(var(--app-shell-margin-baseline))
+    calc(var(--app-shell-margin-baseline) * 2);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
-  color: white;
+  color: var(--color-secondary);
 
   & h1 {
     margin-bottom: 0;

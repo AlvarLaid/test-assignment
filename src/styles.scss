@@ -1,4 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --app-shell-margin-baseline: 48px;
+  --background-gradient-layers: rgb(98, 62, 228), rgb(150, 14, 187);
+  --color-primary: black;
+  --color-secondary: white;
+  --color-accent: orange;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --app-shell-margin-baseline: 24px;
+  }
+}
 
 html,
 body {
@@ -6,7 +18,7 @@ body {
 }
 body {
   margin: 0;
-  background: linear-gradient(rgb(98, 62, 228), rgb(150, 14, 187));
+  background: linear-gradient(var(--background-gradient-layers));
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: Roboto, "Helvetica Neue", sans-serif;
