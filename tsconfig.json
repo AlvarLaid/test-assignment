@@ -21,7 +21,9 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@burger-joints": ["src/app/features/burger-joints/index.ts"]
+      "@burger-joints": ["src/app/features/burger-joints/index.ts"],
+      "@core/model": ["src/app/core/model/index.ts"],
+      "@core/util": ["src/app/core/util/index.ts"]
     }
   },
   "angularCompilerOptions": {

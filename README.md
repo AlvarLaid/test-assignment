@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. run `npm install`
 2. generate new environment files with `ng generate environments`
-3. follow the structure of `environments.example.ts` file to provide Foursquare api key in `environment.development.ts` file
+3. follow the structure of `environments.example.ts` file to provide your once-off Foursquare api key in `environment.development.ts` file.
 4. add your google maps api key to index.html file (look for `key` property in script). This is technically an optional step because you should still be able to use a heavily watermarked map
 5. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 

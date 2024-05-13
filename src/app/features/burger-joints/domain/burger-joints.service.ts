@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
+import { NotificationService } from '@core/util';
 import { map, tap } from 'rxjs';
-import { NotificationService } from 'src/app/core/util/notification.service';
 import { BurgerJointsDataAccessService } from '../data-access/burger-joints-data-access.service';
 import { BurgerJointsStateService } from '../state/burger-joints-state.service';
 import {

@@ -1,7 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { BurgerJointsComponent } from '@burger-joints';
-import { NotificationService } from './core/util/notification.service';
+import { NotificationService } from '@core/util';
 
 @Component({
   selector: 'venues-root',

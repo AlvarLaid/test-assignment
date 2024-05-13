@@ -1,15 +1,15 @@
 <div class="app-shell-container">
   <header>
-    <h1>{{ title }}</h1>
+    <h1 data-testing="app-title">{{ title }}</h1>
 
     @if(notifications.gatheringData$ | async) {
-    <span>Gathering data...</span>
+    <span data-testing="notification-message">Gathering data...</span>
     }
   </header>
   <main>
     <venues-burger-joints />
   </main>
   <footer>
-    <p>Powered by Foursquare</p>
+    <p data-testing="powered-by-foursquare">Powered by Foursquare</p>
   </footer>
 </div>

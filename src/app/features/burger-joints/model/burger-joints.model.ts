@@ -3,8 +3,8 @@ export type BurgerJointRaw = {
   fsq_id: string;
   geocodes: {
     main: {
-      latitude: string;
-      longitude: string;
+      latitude: number;
+      longitude: number;
     };
   };
   name: string;

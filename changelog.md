@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.1 - Chore: add type definitions environment, fix core layer imports, add partial test coverage
+
+- Add path aliases for core layer
+- Add type definition for environments
+- Added few tests to highlight which patterns I would use to write other tests as well. One exception to this is the mocking of Google maps component, which I would not mock if possible (likely try to fetch the google maps in karma setup)
+
 ## v0.1.0 - Feat: estimate appropriate burger joint image size
 
 - Roughly estimate the appropriate burger joint image size based on the actual viewport. This is meant to ensure that the user does not see overly pixellated image at differet screen sizes. A reasonable difference between actual image and fetched image is OK.
