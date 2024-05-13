@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.1 - Chore: add type definitions environment, fix core layer imports, add partial test coverage
+## Chore: add type definitions environment, fix core layer imports, add partial test coverage
 
 - Add path aliases for core layer
 - Add type definition for environments
@@ -11,7 +11,7 @@
 - Roughly estimate the appropriate burger joint image size based on the actual width of the burger list. This is meant to ensure that the user does not see overly pixellated image at differet screen sizes. A reasonable difference between actual image and fetched image is OK.
 - NB! I did choose to use `ResizeObserver` here instead of checking the width during the fetch because that way we can be sure that we don't incurr any unncessary reflows. Essentially instead of checking the width on each request we just listen for actual resizing of the burger joints list and save the estimated image size there.
 
-## v0.0.2 - Chore: refactor CSS
+## Chore: refactor CSS
 
 - Use grid for app shell
 - Use CSS varibles for colors and rename variables to make more sense in the context they are used in. Decided against using sass maps for readability sake, if this was a larger application then I would likely separate tokens by categories (colors, spacing, etc.) and place them under `styles/tokens/` folder
