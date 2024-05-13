@@ -1,5 +1,11 @@
 # Changelog
 
+## Chore: remove invalid grid row CSS rule
+
+- Remove grid-template-rows invalid CSS rule from burger joints list
+
+## Chore: add type definitions environment, fix core layer imports, add partial test coverage
+
 ## Chore: add type definitions environment, fix core layer imports, add partial test coverage
 
 - Add path aliases for core layer
